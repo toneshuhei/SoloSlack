@@ -1,0 +1,1 @@
+# SoloSlack Application Package 

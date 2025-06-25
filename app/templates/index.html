@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloSlack - 一人用チャットツール</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>SoloSlack</h1>
+            <p>一人用のSlack風チャットアプリケーション</p>
+        </header>
+
+        <!-- フィルタエリア -->
+        <div class="filter-area">
+            <button class="filter-btn active" data-tag="">全表示</button>
+            <button class="filter-btn" data-tag="work">work</button>
+            <button class="filter-btn" data-tag="idea">idea</button>
+            <button class="filter-btn" data-tag="study">study</button>
+            <button class="filter-btn" data-tag="memo">memo</button>
+        </div>
+
+        <!-- 投稿表示エリア -->
+        <div class="posts-area" id="postsArea">
+            <!-- 投稿がここに動的に表示されます -->
+        </div>
+
+        <!-- 投稿入力エリア -->
+        <div class="input-area">
+            <form id="postForm" class="post-form">
+                <div class="form-group">
+                    <label for="content">内容:</label>
+                    <textarea id="content" name="content" required maxlength="1000" rows="3" placeholder="投稿内容を入力してください..."></textarea>
+                </div>
+                <div class="form-row tag-row">
+                    <div class="tag-label-group">
+                        <label style="font-weight:bold;">タグ:</label>
+                        <div id="tag-buttons" class="tag-button-group">
+                            <button type="button" class="tag-btn active" data-tag="work">work</button>
+                            <button type="button" class="tag-btn" data-tag="idea">idea</button>
+                            <button type="button" class="tag-btn" data-tag="study">study</button>
+                            <button type="button" class="tag-btn" data-tag="memo">memo</button>
+                        </div>
+                        <input type="hidden" id="tag" name="tag" value="work">
+                    </div>
+                    <button type="submit" class="submit-btn">投稿する</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/app.js') }}"></script>
+</body>
+</html> 
