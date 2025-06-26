@@ -183,23 +183,3 @@ graph TD
 **作成日**: 2025年6月
 **バージョン**: 0.1（MVP定義）
 **作成者**: 登根 周平（SoloSlack 開発者）
-
-.tag-button-group {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-.tag-btn {
-  padding: 6px 16px;
-  border: 2px solid #ddd;
-  background: #fafafa;
-  color: #333;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.tag-btn.active {
-  background: #4a154b;
-  color: #fff;
-  border-color: #4a154b;
-}
